@@ -1,35 +1,39 @@
 package javapractice;
 
 import java.util.HashMap;
+import java.util.Map;
+import java.util.Set;
 
 public class Practice {
 
 	public static void main(String[] args) {
 		
-		String str = "abcabcabcaa";
-		HashMap<Character, Integer> hm = new HashMap<>();
 		
-	/*	for (int i = 0; i < ch.length; i++) {
-			if (hm.containsKey(ch[i])) {
-				hm.put(ch[i], hm.get(ch[i]) + 1);
-			}
-
-			else
-				hm.put(ch[i], 1); */
-
+		System.out.println(counter("laaridldsa"));
 		
-		for(int i=0; i<str.length();i++)
-		{
-			if(hm.containsKey(str.charAt(i))) {
-				hm.put(str.charAt(i), hm.get(str.charAt(i))+1 );
+}
+	
+	public static String counter(String s) {
+		String rev= "" ;
+		for(int i=0; i<s.length(); i++) {
+			
+			String sub = String.valueOf(s.charAt(i));
+			int j = i+1;
+			if( j<s.length() && !sub.contains(String.valueOf(s.charAt(j)))) {
+				rev = rev + s.charAt(j);
+				System.out.println(rev);
+				j++;
 			}
-			else
-			hm.put(str.charAt(i), 1);	
+			  rev +=sub;
+				
+			}
+		return rev;
 		}
 		
-		System.out.println(hm);
 		
-		
-		
-}}
+	
+	
+	
+	
+	}
 

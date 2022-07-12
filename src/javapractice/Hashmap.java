@@ -28,7 +28,8 @@ public class Hashmap {
 		
 		for(Map.Entry<Character, Integer> en: se) {
 			if(en.getValue() > 1)
-				System.out.println(en.getKey());
+				System.out.println(en.getKey() + ":" + en.getValue());
+			    
 			
 			 
 		 }
